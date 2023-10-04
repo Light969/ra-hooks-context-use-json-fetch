@@ -1,23 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import { Data } from './react-component/Data';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Data endpoint="data" title="Успешное получение данных" />
+      <Data endpoint="error" title="Получение 500 ошибки" />
+      <Data endpoint="loading" title="Индикатор загрузки" />
     </div>
   );
 }
